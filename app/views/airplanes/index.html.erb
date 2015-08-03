@@ -1,0 +1,20 @@
+<style>
+  h1 {
+    border-bottom: solid 3px gray;
+    margin-bottom: 24px;
+  }
+</style>
+
+<p><%= link_to "Add a New Airplane", "/airplanes/new" %></p>
+
+<ul>
+
+  <% @airplanes.each do |airplane| %>
+    <li>
+      <%= link_to airplane.name, "/airplanes/#{airplane.id}" %>
+ 
+      <%= link_to "(delete)", "/airplanes/#{airplane.id}", :method => 'delete' %>
+    </li>
+  <% end %>
+
+</ul>

@@ -1,0 +1,15 @@
+
+<h2>Edit a Airplane</h2>
+
+
+<%= form_tag "/airplanes/#{@airplane.id}", :method => 'patch' do %>
+ <p><label>Name:</label> <input value="<%= @airplane.name %>" name="name" size="30"></p>
+  <p><label>Status:</label> <input value="<%= @airplane.status %>" name="status" size="30"></p>
+  <p><label>Manufacturer:</label> <input name="manufacturer" value="<%= @airplane.manufacturer%> "></p>
+    <p><label>First flight:</label> <input value="<%= @airplane.first_flight%>" name="first_flight" size="30"></p>
+      <p><label>Description:</label> <input value="<%= @airplane.description %>" name="description" size="300"></p>
+
+  <p><label>Picture URL:</label> <input value="<%= @airplane.picture_url %>" name="picture_url" size="200"></p>
+  
+  <p><button>Update</button></p>
+<% end %>

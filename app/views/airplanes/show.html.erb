@@ -1,0 +1,14 @@
+
+
+<h2><%= @airplane.name %></h2>
+<%= link_to "Edit", "/airplanes/#{@airplane.id}/edit" %>
+<h4>Status: <%= @airplane.status %></h4>
+<h4>Manufacturer: <%= @airplane.manufacturer %></h4>
+<h4>First flight: <%= @airplane.first_flight %></h4>
+<h4>Description: </h4>
+<p> <%= @airplane.description %></p>
+
+<p>
+<%= image_tag @airplane.picture_url, size: '500x500' %>
+
+</p>

@@ -1,0 +1,7 @@
+Airplane
+  name: string
+  picture_url: string
+  manufacturer: string
+  status: string
+  first_flight: string
+  description: string

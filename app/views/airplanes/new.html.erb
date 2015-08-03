@@ -1,0 +1,12 @@
+<h2>Add a New Airplane</h2>
+
+<%= form_tag "/airplanes" do %>
+  <p><label>Name:</label> <input name="name" size="30"></p>
+  <p><label>Status:</label> <input name="status" size="30"></p>
+  <p><label>Manufacturer:</label> <input name="manufacturer" ></p>
+   <p><label>First flight:</label> <input name="first_flight" ></p>
+    <p><label>Description:</label> <input name="description" ></p>
+  <p><label>picture_url:</label> <input name="picture_url" size="80"></p>
+  
+  <p><button>Submit</button></p>
+<% end %>
