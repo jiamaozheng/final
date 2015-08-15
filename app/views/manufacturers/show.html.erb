@@ -1,0 +1,18 @@
+<h1><%= @manufacturer.name %></h1>
+
+<p>
+  <%= image_tag @manufacturer.poster_url, size: '200x80' %>
+ </p>
+
+
+ <h4>Description: <%= @manufacturer.description %></h4>
+
+ <h4></h4>
+
+   <% @manufacturer.airplanes.each do |airplane| %>
+
+
+ <h4></h4>
+ <h4><%= link_to airplane.name, "/airplanes/#{airplane.id}" %></h4>
+
+<% end %>

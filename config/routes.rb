@@ -2,7 +2,15 @@ Rails.application.routes.draw do
 
   root 'airplanes#index'
 
+  get '/sessions/new' => 'sessions#new'
+  post '/sessions' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+  get '/account' => 'users#show'
+
   resources :airplanes
+  resources :manufacturers
+  resources :airlines 
+  resources :users
 
 
 

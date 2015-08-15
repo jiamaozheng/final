@@ -1,0 +1,18 @@
+<h1><%= @airline.name %></h1>
+
+<p>
+  <%= image_tag @airline.url, size: '200x80' %>
+ </p>
+
+
+ <h4>Description: <%= @airline.description %></h4>
+
+ <h4></h4>
+
+   <% @airline.airplanes.each do |airplane| %>
+
+
+ <h4></h4>
+ <h4><%= link_to airplane.name, "/airplanes/#{airplane.id}" %></h4>
+
+<% end %>

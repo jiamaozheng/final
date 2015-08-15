@@ -3,12 +3,16 @@
 <h2><%= @airplane.name %></h2>
 <%= link_to "Edit", "/airplanes/#{@airplane.id}/edit" %>
 <h4>Status: <%= @airplane.status %></h4>
-<h4>Manufacturer: <%= @airplane.manufacturer %></h4>
 <h4>First flight: <%= @airplane.first_flight %></h4>
-<h4>Description: </h4>
-<p> <%= @airplane.description %></p>
+<h4>Role: <%= @airplane.role %></h4>
+<h4>produced: <%= @airplane.produced %></h4>
+<h4>Number of built: <%= @airplane.number_built %></h4>
+<h4>Unit cost: <%= @airplane.unit_cost %></h4>
 
 <p>
 <%= image_tag @airplane.picture_url, size: '500x500' %>
 
 </p>
+
+<h4>Description: </h4>
+<p> <%= @airplane.description %></p>

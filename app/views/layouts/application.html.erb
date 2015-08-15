@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Airplanes</title>
+  <title>Ethan - Future Pilot</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js' %>
@@ -22,15 +22,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Airplanes</a>
+        <a class="navbar-brand" href="/">Ethan - Future Pilot</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="/airplanes">Airplanes</a></li>
-          <li><a href="/shows">Shows</a></li>
-          <li><a href="/manufactuers">Manufactuers</a></li>
+          <li><a href="/manufacturers">Manufacturers</a></li>
+          <li><a href="/airlines">Airlines</a></li>
 
           <!-- CHALLENGE #5: Make this search form work -->
           <form action="/airplanes" class="navbar-form navbar-left" role="search">
@@ -42,8 +42,13 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Login</a></li>
+          <% if session[:user_id] %>
+            <li>Howdy, <%= User.find(session[:user_id]).name %></li>
+          <% end %>
+          <li><a href="/users/new">Sign Up</a></li>
+          <li><a href="/sessions/new">Sign In</a></li>
+          <li><a href="/account">My Account</a></li>
+          <li><a href="/logout">Sign Out</a></li>
         </ul>
       </div>
     </div>
@@ -51,12 +56,12 @@
 
   <div class="container">
 
-    <%= notice %>
+    <% if flash[:notice].present? %>
+      <div class="alert alert-info">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
-  <!--   <h3>COOKIES:</h3>
-    <%= cookies["sport"] %>
-    <%= cookies["movie_id"] %> -->
-    
     <%= yield %>
 
   </div>

@@ -5,16 +5,51 @@
   }
 </style>
 
-<p><%= link_to "Add a New Airplane", "/airplanes/new" %></p>
 
-<ul>
+<h1>Airplanes
+  <small>
+    <a class="btn btn-success pull-right" href="/airplanes/new">Add a New Airplane</a>
+  </small>
+</h1>
 
-  <% @airplanes.each do |airplane| %>
-    <li>
-      <%= link_to airplane.name, "/airplanes/#{airplane.id}" %>
- 
-      <%= link_to "(delete)", "/airplanes/#{airplane.id}", :method => 'delete' %>
-    </li>
-  <% end %>
+<% if cookies["history"] %>
+  <p><small><%= link_to "Clear My Viewing History", "#" %></small></p>
+  <div class="recent clearfix">
+    <h4>Your Recently Viewed Items</h4>
+    <% recent_airplanes = Airplane.find(cookies["history"]) %>
+    <% recent_airplanes.each do |airplane| %>
+      <%= link_to image_tag(airplane.picture_url, height: '200px'), airplane %>
+    <% end %>
+  </div>
+<% end %>
 
-</ul>
+<p><%= @airplanes.count %> airplanes shown.</p>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th width="30%">Name</th>
+      <th width="30%">Produced By</th>
+      <th>Year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  <tbody>
+    <% @airplanes.each do |airplane| %>
+      <tr>
+        <td>
+          <%= link_to airplane.name, "/airplanes/#{airplane.id}" %>
+        </td>
+        <td>
+          <% if airplane.manufacturer_id != nil %>
+            <%= link_to Manufacturer.find_by(:id => airplane.manufacturer_id).name, "/manufacturers/#{airplane.manufacturer_id}" %>
+          <% end %> 
+        </td>
+        <td><%= airplane.first_flight %></td>
+
+        <td><%= link_to "Delete", "/airplanes/#{airplane.id}", :method => "delete" %></td>
+        <td><%= link_to "Edit", "/airplanes/#{airplane.id}/edit" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

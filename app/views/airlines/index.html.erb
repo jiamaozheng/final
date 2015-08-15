@@ -1,0 +1,7 @@
+<h1>Airlines</h1>
+
+<ul>
+<% @airlines.each do |d| %>
+  <li><%= link_to d.name, "/airlines/#{d.id}" %></li>
+<% end %>
+</ul>

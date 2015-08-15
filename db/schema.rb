@@ -13,13 +13,46 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "airplanes", force: :cascade do |t|
+  create_table "airlines", force: :cascade do |t|
     t.string "name"
-    t.string "picture_url"
-    t.string "manufacturer"
-    t.string "status"
-    t.string "first_flight"
+    t.string "url"
     t.string "description"
+  end
+
+  create_table "airplanes", force: :cascade do |t|
+    t.string  "name"
+    t.string  "picture_url"
+    t.string  "status"
+    t.string  "first_flight"
+    t.string  "description"
+    t.string  "role"
+    t.integer "manufacturer_id"
+    t.string  "produced"
+    t.string  "number_built"
+    t.string  "unit_cost"
+  end
+
+  add_index "airplanes", ["manufacturer_id"], name: "index_airplanes_on_manufacturer_id"
+
+  create_table "manufacturers", force: :cascade do |t|
+    t.string "name"
+    t.string "poster_url"
+    t.string "description"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.integer "airplane_id"
+    t.integer "airline_id"
+  end
+
+  add_index "roles", ["airline_id"], name: "index_roles_on_airline_id"
+  add_index "roles", ["airplane_id"], name: "index_roles_on_airplane_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string  "name"
+    t.string  "email"
+    t.string  "password"
+    t.boolean "admin",    default: false
   end
 
 end
