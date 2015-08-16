@@ -24,6 +24,7 @@ def index
 
   def show
     @airplane = Airplane.find(params[:id])
+    cookies.signed["fruit"] = "choc chip cookies"
     session["history"] ||= []
     session["history"] << @airplane.id
   end

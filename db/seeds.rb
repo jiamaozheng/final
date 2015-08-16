@@ -10,6 +10,9 @@ Manufacturer.delete_all
 Airplane.delete_all
 Airline.delete_all
 Role.delete_all 
+# User.delete_all
+
+# jiamaoz = User.create(:name => 'jiamaozheng', :email => 'jiamaoz@yahoo.com', :password_digest => '00001128')
 
 us_airways = Airline.create(:name => "US Airways",
 	:url => "https://upload.wikimedia.org/wikipedia/commons/0/09/US_Airways_Logo.svg", 
