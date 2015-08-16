@@ -1,28 +1,11 @@
-== README
+Welcome to Ethan - Future Pilot Homepage 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Experience a wide variety of fascinating aircrafts from one of the world busiest airports, Chicago O’hare international with MyAirplanePics app!  With Future Pilot webapp you experience big and small jets ranging from small 737s to the queen 747s all in a neat, sleek, and modern design. You will have the ability to search aircrafts by airplane name through the Search Bar tool, add an new airplane, delete/edit/udpate an airpalne, create an user account, and manage your account. You will also be able to view a list of airplanes associated manufacturers and arilines. 
 
-Things you may want to cover:
+Ethan - Future Pilot webapp currently has 24 different aircrafts all laid out in a modern, sleek, intuitive interface.Each aircraft includes a HD photo, a brief description, role, manufacture, first flight time, status, primary users, produced time, number built and unit cost.
 
-* Ruby version
+Please visit us at www.ethanfuturepilot.xyz for more. 
 
-* System dependencies
+Any questions, please email us at jiamaoz@yahoo.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Thank you for your support 
