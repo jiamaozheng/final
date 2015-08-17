@@ -4,8 +4,17 @@ Experience a wide variety of fascinating aircrafts from one of the world busiest
 
 Ethan - Future Pilot webapp currently has 24 different aircrafts all laid out in a modern, sleek, intuitive interface.Each aircraft includes a HD photo, a brief description, role, manufacture, first flight time, status, primary users, produced time, number built and unit cost.
 
-Please visit us at www.ethanfuturepilot.xyz for more. 
+This web app is currently alive at http://www.ethanfuturepilot.xyz. 
 
 Any questions, please email us at jiamaoz@yahoo.com
 
 Thank you for your support 
+
+A brief instruction to run this Rails app on your local computer: 
+
+Clone this repository
+bundle install --without production
+rake db:migrate
+rake db:seed
+rails server
+At this point, you should be able to browse to http://localhost:3000 and you should see a list of awesome airplanes.
