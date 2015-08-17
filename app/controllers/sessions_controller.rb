@@ -7,8 +7,16 @@ class SessionsController < ApplicationController
   def destroy
     # sessions[:user_id] = nil
     reset_session
-    redirect_to root_url, notice: "See ya!"
+    redirect_to root_url, notice: "See you later!"
   end
+
+   def clear
+    # sessions[:user_id] = nil
+    reset_session
+    redirect_to user_url(@user.id)
+
+  end
+
   def create
     user = User.find_by_email(params["email"])
 

@@ -43,7 +43,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           <% if session[:user_id] %>
-            <li>Howdy, <%= User.find(session[:user_id]).name %></li>
+            <li>Hi, <%= User.find(session[:user_id]).name %></li>
           <% end %>
           <li><a href="/users/new">Sign Up</a></li>
           <li><a href="/sessions/new">Sign In</a></li>

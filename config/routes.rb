@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/sessions/new' => 'sessions#new'
   post '/sessions' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+  get '/clear' => 'sessions#clear'
   get '/account' => 'users#show'
 
   resources :airplanes

@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "airplanes", force: :cascade do |t|
     t.string  "name"
-    t.string  "picture_url"
-    t.string  "status"
-    t.string  "first_flight"
-    t.string  "description"
     t.string  "role"
     t.integer "manufacturer_id"
+    t.string  "first_flight"
+    t.string  "status"
     t.string  "produced"
     t.string  "number_built"
     t.string  "unit_cost"
+    t.string  "picture_url"
+    t.string  "description"
   end
 
   add_index "airplanes", ["manufacturer_id"], name: "index_airplanes_on_manufacturer_id"

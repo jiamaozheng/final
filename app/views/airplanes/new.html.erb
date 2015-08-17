@@ -1,12 +1,25 @@
 <h2>Add a New Airplane</h2>
 
+<% if @airplane.errors.any? %>
+<p>
+  There seems to be a problem.
+</p>
+<% end %>
+
 <%= form_tag "/airplanes" do %>
   <p><label>Name:</label> <input name="name" size="30"></p>
   <p><label>Status:</label> <input name="status" size="30"></p>
   <p><label>Manufacturer:</label> <input name="manufacturer" ></p>
    <p><label>First flight:</label> <input name="first_flight" ></p>
-    <p><label>Description:</label> <input name="description" ></p>
-  <p><label>picture_url:</label> <input name="picture_url" size="80"></p>
-  
-  <p><button>Submit</button></p>
+    <p><label>Description:</label> <input name="description" size="300"></p>
+  <p><label>Picture_url:</label> <input name="picture_url" size="100"></p>
+
+ <label> Please select a manufacturer:</label>
+   <select name="manufacturer_id">
+    <% Manufacturer.all.each do |d| %>
+      <option value="<%= d.id %>"><%= d.name %></option>
+    <% end %>
+  </select>
+   <p> </p>
+  <p><button>Add</button></p>
 <% end %>

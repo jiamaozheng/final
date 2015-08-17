@@ -5,25 +5,32 @@
   }
 </style>
 
-
 <h1>Airplanes
-  <small>
-    <a class="btn btn-success pull-right" href="/airplanes/new">Add a New Airplane</a>
-  </small>
+  <% if session[:user_id] %>
+    <small>
+      <a class="btn btn-success pull-right" href="/airplanes/new">
+        Add a New Airplane</a>
+    </small>
+  <% else %>
+    <p>Sign In to Add Airplanes</p>
+  <% end %>
 </h1>
 
-<% if cookies["history"] %>
-  <p><small><%= link_to "Clear My Viewing History", "#" %></small></p>
+<h2><%= cookies.signed["fruit"] %></h2>
+
+<% if session["history"] %>
+  <p><small><%= link_to "Clear My Viewing History", "/logout" %></small></p>
   <div class="recent clearfix">
-    <h4>Your Recently Viewed Items</h4>
-    <% recent_airplanes = Airplane.find(cookies["history"]) %>
+    <h4>Your Recently Viewed Airplanes</h4>
+    <% recent_airplanes = Airplane.find(session["history"]) %>
     <% recent_airplanes.each do |airplane| %>
-      <%= link_to image_tag(airplane.picture_url, height: '200px'), airplane %>
+      <%= link_to image_tag(airplane.picture_url, height: '50px'), airplane %>
     <% end %>
   </div>
 <% end %>
 
 <p><%= @airplanes.count %> airplanes shown.</p>
+<% paginate @airplanes %> 
 
 <table class='table table-striped'>
   <thead>
