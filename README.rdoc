@@ -1,4 +1,4 @@
-Welcome to Ethan - Future Pilot Homepage 
+Welcome to Ethan - Future Pilot web app  
 
 Experience a wide variety of fascinating aircrafts from one of the world busiest airports, Chicago O’hare international with MyAirplanePics app!  With Future Pilot webapp you experience big and small jets ranging from small 737s to the queen 747s all in a neat, sleek, and modern design. You will have the ability to search aircrafts by airplane name through the Search Bar tool, add an new airplane, delete/edit/udpate an airpalne, create an user account, and manage your account. You will also be able to view a list of airplanes associated manufacturers and arilines. 
 
@@ -8,13 +8,14 @@ This web app is currently alive at http://www.ethanfuturepilot.xyz.
 
 Any questions, please email us at jiamaoz@yahoo.com
 
-Thank you for your support 
+
 
 A brief instruction to run this Rails app on your local computer: 
 
-Clone this repository
-bundle install --without production
-rake db:migrate
-rake db:seed
-rails server
+1) Clone this repository. 
+2) Bundle install --without production.
+3) Rake db:migrate.
+4) Rake db:seed.
+5) Rails server. 
+
 At this point, you should be able to browse to http://localhost:3000 and you should see a list of awesome airplanes.
