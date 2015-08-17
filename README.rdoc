@@ -13,9 +13,13 @@ Any questions, please email us at jiamaoz@yahoo.com
 A brief instruction to run this Rails app on your local computer: 
 
 1) Clone this repository. 
+
 2) Bundle install --without production.
+
 3) Rake db:migrate.
+
 4) Rake db:seed.
+
 5) Rails server. 
 
 At this point, you should be able to browse to http://localhost:3000 and you should see a list of awesome airplanes.
