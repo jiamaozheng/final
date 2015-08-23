@@ -1,7 +1,25 @@
 <h1>Manufacturers</h1>
 
+<!-- <h2><%= cookies.signed["fruit"] %></h2> -->
+
+<% if session["history_manufacturer"] %>
+  <p><small><%= link_to "Clear My Viewing History", "/logout" %></small></p>
+  <div class="recent clearfix">
+    <h4>Your Recently Viewed Manufacturers</h4>
+    <% recent_manufacturers = Manufacturer.find(session["history_manufacturer"]) %>
+    <% recent_manufacturers.each do |manufacturer| %>
+      <%= link_to image_tag(manufacturer.poster_url, height: '20px'), manufacturer %>
+    <% end %>
+  </div>
+<% end %>
+
+<p><%= @manufacturers.count %> manfactures shown.</p>
+<%= paginate @manufacturers %>
+
 <ul>
 <% @manufacturers.each do |d| %>
   <li><%= link_to d.name, "/manufacturers/#{d.id}" %></li>
 <% end %>
 </ul>
+
+<% paginate @manufacturers %> 

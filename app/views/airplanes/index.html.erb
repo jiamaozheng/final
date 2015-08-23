@@ -1,9 +1,4 @@
-<style>
-  h1 {
-    border-bottom: solid 3px gray;
-    margin-bottom: 24px;
-  }
-</style>
+
 
 <h1>Airplanes
   <% if session[:user_id] %>
@@ -16,13 +11,13 @@
   <% end %>
 </h1>
 
-<h2><%= cookies.signed["fruit"] %></h2>
+<!-- <h2><%= cookies.signed["fruit"] %></h2> -->
 
-<% if session["history"] %>
+<% if session["history_airplane"] %>
   <p><small><%= link_to "Clear My Viewing History", "/logout" %></small></p>
   <div class="recent clearfix">
     <h4>Your Recently Viewed Airplanes</h4>
-    <% recent_airplanes = Airplane.find(session["history"]) %>
+    <% recent_airplanes = Airplane.find(session["history_airplane"]) %>
     <% recent_airplanes.each do |airplane| %>
       <%= link_to image_tag(airplane.picture_url, height: '50px'), airplane %>
     <% end %>
@@ -30,7 +25,7 @@
 <% end %>
 
 <p><%= @airplanes.count %> airplanes shown.</p>
-<% paginate @airplanes %> 
+<%= paginate @airplanes %>
 
 <table class='table table-striped'>
   <thead>
@@ -60,3 +55,5 @@
     <% end %>
   </tbody>
 </table>
+
+

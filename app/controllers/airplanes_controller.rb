@@ -8,7 +8,7 @@ def index
       @airplanes = Airplane.all
     end
 
-    @airplanes = @airplanes.page(params[:page]).per(10)
+    @airplanes = @airplanes.page(params[:page]).per(3)
 
     respond_to do |format|
       format.html do
@@ -27,8 +27,8 @@ def index
   def show
     @airplane = Airplane.find(params[:id])
     cookies.signed["fruit"] = "Hello"
-    session["history"] ||= []
-    session["history"] << @airplane.id
+    session["history_airplane"] ||= []
+    session["history_airplane"] << @airplane.id
   end
 
   def new

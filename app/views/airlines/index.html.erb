@@ -1,5 +1,21 @@
 <h1>Airlines</h1>
 
+<!-- <h2><%= cookies.signed["fruit"] %></h2> -->
+
+<% if session["history_airline"] %>
+  <p><small><%= link_to "Clear My Viewing History", "/logout" %></small></p>
+  <div class="recent clearfix">
+    <h4>Your Recently Viewed Airplanes</h4>
+    <% recent_airplanes = Airline.find(session["history_airline"]) %>
+    <% recent_airplanes.each do |airplane| %>
+      <%= link_to image_tag(airplane.url, height: '20px'), airplane %>
+    <% end %>
+  </div>
+<% end %>
+
+<p><%= @airlines.count %> airlines shown.</p>
+<%= paginate @airlines %>
+
 <ul>
 <% @airlines.each do |d| %>
   <li><%= link_to d.name, "/airlines/#{d.id}" %></li>

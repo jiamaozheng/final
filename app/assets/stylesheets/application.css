@@ -19,13 +19,13 @@ p {
 
 nav h1 {
   background: #009;
-  color: white;
+  color: black;
   padding: 12px;
 }
 
 nav a, nav a:visited {
  text-decoration: none;
- color: white;
+ color: black;
 }
 
 h2 {
