@@ -1,4 +1,26 @@
-
+<style>
+  h2 {
+    color: red;
+    background: #006;
+    padding: 6px;
+    text-align: center;
+  }
+  .price {
+    color: green;
+    border: solid 3px green;
+    padding: 4px;
+  }
+  img {
+    float: left;
+    margin-right: 40px;
+    box-shadow: 8px 8px 4px gray;
+    height: "200px";
+  }
+  p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+</style>
 
 <h2><%= @airplane.name %></h2>
 <%= link_to "Edit", "/airplanes/#{@airplane.id}/edit" %>
@@ -7,11 +29,21 @@
 <h4>Role: <%= @airplane.role %></h4>
 <h4>produced: <%= @airplane.produced %></h4>
 <h4>Number of built: <%= @airplane.number_built %></h4>
-<h4>Unit cost: <%= @airplane.unit_cost %></h4>
+<h4>Unit cost: <%= @airplane.unit_cost %></h4> <br>
 
-<p>
-<%= image_tag @airplane.picture_url, size: '500x500' %>
-</p>
+<h4>Primary airlines: </h4>
 
-<h4>Description: </h4>
-<p> <%= @airplane.description %></p>
+  <% @airplane.airlines.each do |airline| %>
+  <li>
+	 <h4><%= link_to airline.name, "/airlines/#{airline.id}" %></h4>
+  </li>
+<% end -%> <br>
+
+ <p>
+ <%= image_tag @airplane.picture_url, size: '500x500' %>
+ </p> 
+
+
+ <h4>Description: </h4>
+ <p> <%= @airplane.description %></p><br><br><br><br>
+

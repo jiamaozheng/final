@@ -12,9 +12,6 @@ Airline.delete_all
 Role.delete_all 
 User.delete_all
 
-jiamaoz1 = User.create(:name => "jiamaozheng1", :email => "jiamaoz@yahoo.com", :password_digest => "0000")
-jiamaoz2 = User.create(:name => "jiamaozheng2", :email => "jiamaoz@uchicago.edu", :password_digest => "1128")
-
 us_airways = Airline.create(:name => "US Airways",
 	:url => "https://upload.wikimedia.org/wikipedia/commons/0/09/US_Airways_Logo.svg", 
 	:description => "US Airways is a major American airline owned and operated by American Airlines Group. It operates an extensive international and domestic network, with 193 destinations in 24 countries in North America, South America, Europe and the Middle East")
@@ -69,8 +66,30 @@ south_african_airways = Airline.create(:name => "South African Airways",
 virgin_atlantic = Airline.create(:name => "Virgin Atlantic",
 	:url => "https://upload.wikimedia.org/wikipedia/commons/e/e1/Virgin_Atlantic_Airways_Logo.png", 
 	:description => "Virgin Atlantic, a trading name of Virgin Atlantic Airways Limited, is a British airline with its head office in Crawley, West Sussex, England. The airline was established in 1984 as British Atlantic Airways, and was originally planned by its co-founders Randolph Fields and Alan Hellary to fly between London and the Falkland Islands. Soon after changing the name to Virgin Atlantic Airways, Fields sold his shares in the company after disagreements with Richard Branson over the management of the company. The maiden flight from Gatwick to Newark Liberty International Airport took place on 22 June 1984. The airline along with Virgin Holidays is controlled by a holding company Virgin Atlantic Limited which is owned 51% by the Virgin Group and 49% by Delta Air Lines. It is administratively separate from other Virgin-branded airlines.")
-
-
+fedex_express = Airline.create(:name => "FedEx Express",
+	:url => "https://upload.wikimedia.org/wikipedia/commons/9/9d/FedEx_Express.svg", 
+	:description => "FedEx Express, formerly Federal Express, is a cargo airline based in Memphis, Tennessee, United States.[2] It is the world's largest airline in terms of freight tons flown and the world's fourth largest in terms of fleet size.[3] It is a subsidiary of FedEx Corporation, delivering packages and freight to more than 375 destinations in nearly every country each day.[4] FedEx Express is the world's largest express transportation company.")
+ups_airlines = Airline.create(:name => "UPS Airlines",
+	:url => "https://upload.wikimedia.org/wikipedia/commons/6/60/Ups_shield_og_square.png", 
+	:description => "UPS Airlines is an American cargo airline owned by United Parcel Service Inc. (NYSE: UPS). The company is headquartered in Louisville, Kentucky.[3] Its international all-points air hub, Worldport, is based at Louisville International Airport. The pilots are represented by the Independent Pilots Association.")
+lufthansa_cargo = Airline.create(:name => "Lufthansa Cargo",
+	:url => "https://upload.wikimedia.org/wikipedia/en/3/37/Lufthansa_Cargo-Logo.svg", 
+	:description => "Lufthansa Cargo AG is a German cargo airline and a wholly owned subsidiary of Lufthansa. It operates worldwide air freight and logistics services and is headquartered at Frankfurt Airport, the main hub of Lufthansa.")
+martinair = Airline.create(:name => "Martinair",
+	:url => "https://upload.wikimedia.org/wikipedia/commons/3/33/Martinair_logo.svg", 
+	:description => "Martinair Holland N.V., operating as Martinair, is a Dutch airline based in the Amsterdam Metropolitan Area in Netherlands. The airline was founded in 1958 by Martin Schröder. Since 2011, Martinair operates entirely as a cargo airline with services to over 50 destinations worldwide. Prior to that date, passenger flights were also operated. Flights are on a scheduled basis, but charter services are also operated. The Martinair headquarters are in the TransPort Building on the grounds of Amsterdam Airport Schiphol.")
+emirates = Airline.create(:name => "Emirates (airline)",
+	:url => "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg", 
+	:description => "Emirates is an airline based in Dubai, United Arab Emirates. The airline is a subsidiary of The Emirates Group, which is wholly owned by the government of Dubai's Investment Corporation of Dubai.[3] It is the largest airline in the Middle East, operating over 3,300 flights per week from its hub at Dubai International Airport, to more than 144 cities in 78 countries across six continents.[4] Cargo activities are undertaken by Emirates SkyCargo.")
+united_airlines = Airline.create(:name => "United Airlines",
+	:url => "https://upload.wikimedia.org/wikipedia/en/e/e0/United_Airlines_Logo.svg", 
+	:description => "United Airlines, Inc., is a major American airline carrier headquartered in Chicago, Illinois.[7][8] It is the world's largest airline when measured by number of destinations served.[9] In the late 1920s, just prior to the use of the United Airlines name, The Boeing Company, currently one of the world's largest aircraft manufacturers, operated a predecessor airline.")
+cathay_pacific = Airline.create(:name => "Cathay Pacific",
+	:url => "https://upload.wikimedia.org/wikipedia/en/1/17/Cathay_Pacific_logo.svg", 
+	:description => "Cathay Pacific (simplified Chinese: 国泰航空; traditional Chinese: 國泰航空) (SEHK: 0293) is the largest airline of Hong Kong, with its head office and main hub located at Hong Kong International Airport. The airline's operations include scheduled passenger and cargo services to 200 destinations in 52 countries worldwide, codeshares, and joint ventures, with a fleet of wide-body aircraft, consisting of Airbus A330, Airbus A340, Boeing 747 and Boeing 777 equipment. Its wholly owned subsidiary, Dragonair, operates to 44 destinations in the Asia-Pacific region from its Hong Kong base. In 2010, Cathay Pacific and Dragonair carried nearly 27 million passengers and over 1.8 million tonnes of cargo and mail.")
+airfrance = Airline.create(:name => "Air France",
+	:url => "https://upload.wikimedia.org/wikipedia/commons/4/44/Air_France_Logo.svg", 
+	:description => "Air France (formally Société Air France, S.A.), stylized as AIRFRANCE, is the French flag carrier headquartered in Tremblay-en-France, (north of Paris). It is a subsidiary of the Air France-KLM Group and a founding member of the SkyTeam global airline alliance. As of 2013 Air France serves 36 destinations in France and operates worldwide scheduled passenger and cargo services to 168 destinations in 93 countries (including overseas departments and territories of France) and also carried 59,513,000 passengers in 2011. The airline's global hub is at Paris Charles de Gaulle Airport, with Paris Orly Airport, Lyon-Saint Exupéry Airport, Marseille Provence Airport, Toulouse Blagnac Airport, and Nice Côte d'Azur Airport serving as secondary hubs.[3] Air France's corporate headquarters, previously in Montparnasse, Paris,[4] are located on the grounds of Paris-Charles de Gaulle Airport, north of Paris.")
 airbus = Manufacturer.create(:name => "Airbus", 
 	:poster_url => "https://upload.wikimedia.org/wikipedia/en/8/80/Airbus_logo.png", 
 	:description => "Airbus SAS (/ˈɛərbʌs/, French: [ɛʁbys] ( listen), German: [ˈɛːɐbʊs], Spanish: [ˈerβus]) is an aircraft manufacturer division of Airbus Group (formerly European Aeronautic Defence and Space Company). It is based in Blagnac, France, a suburb of Toulouse,[2][3] with production and manufacturing facilities mainly in France, Germany, Spain and the United Kingdom.")
@@ -83,6 +102,9 @@ mcdonnell_douglas = Manufacturer.create(:name => "McDonnell Douglas",
 bombardier_aerospace = Manufacturer.create(:name => "Bombardier Aerospace", 
 	:poster_url => "https://upload.wikimedia.org/wikipedia/commons/6/69/Bombardier.svg",
 	:description => "Bombardier Aerospace is a division of Bombardier Inc. The company competes with Brazilian rival Embraer for the title of the third largest aircraft manufacturer after Boeing and Airbus. It is headquartered in Dorval, Quebec, Canada.")
+boeing_commercial_airplanes = Manufacturer.create(:name => "Boeing Commercial Airplanes", 
+	:poster_url => "https://upload.wikimedia.org/wikipedia/en/b/b5/Boeing-Logo.svg",
+	:description => "Boeing Commercial Airplanes (BCA) designs, assembles, markets and sells jet airliners and business jets (Boeing Business Jets); it also provides product-related maintenance and training to customers worldwide.[2] A business division of parent The Boeing Company, Boeing Commercial Airplanes operates from division headquarters in Renton, Washington and more than one dozen engineering, manufacturing and assembly facilities located throughout the United States and internationally.[3] Boeing Commercial Airplanes includes the assets of the Douglas Aircraft division of the former McDonnell Douglas Corporation, which merged with Boeing in 1997.[4] The current President and CEO of Boeing Commercial Airplanes is Raymond Conner, the former head of Sales, Marketing and Services.")
 
 puts "There are now #{Manufacturer.count} directors in the database."
 
@@ -142,6 +164,27 @@ a340 = Airplane.create(:name => "Airbus A340",
 	:unit_cost => "US$87 million (about DEM 163.6 million or £53 million) (1989)", 
 	:description => "The Airbus A340 is a long-range, four-engine, wide-body commercial passenger jet airliner developed and produced by Airbus. The A340 was assembled at Toulouse, France. It seats up to 375 passengers in the standard variants and 440 in the stretched -600 series. Depending on the model, it has a range of between 6,700 to 9,000 nautical miles (12,400 to 16,700 km). The A340 is similar in design to the twin-engined A330 with which it was concurrently designed. Its distinguishing features are four high-bypass turbofan engines and three-bogie main landing gears.")
 
+md11 = Airplane.create(:name => "McDonnell Douglas MD-11", 
+	:picture_url=> "https://upload.wikimedia.org/wikipedia/commons/3/36/KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg", 
+	:role => "Wide-body jet airliner",
+	:manufacturer_id => mcdonnell_douglas.id,  
+	:status => "In service as cargo aircraft", 
+	:first_flight => "January 10, 1990", 
+	:produced => "1988–2000",
+	:number_built => "200",
+	:unit_cost => "US$87 million (about DEM 163.6 million or £53 million) (1989)", 
+	:description => "The McDonnell Douglas MD-11 is a three-engine medium- to long-range wide-body jet airliner, manufactured by McDonnell Douglas and, later, by Boeing Commercial Airplanes. Based on the DC-10, it features a stretched fuselage, increased wingspan with winglets, refined airfoils on the wing and smaller tailplane, new engines and increased use of composite materials. Two of its engines are mounted on underwing pylons and a third engine at the base of the vertical stabilizer. It also features an all-digital glass cockpit that decreases the flight deck crew from the three required on the DC-10 to two by eliminating the need for a flight engineer.")
+
+boeing_777 = Airplane.create(:name => "Boeing 777", 
+	:picture_url=> "https://upload.wikimedia.org/wikipedia/commons/0/07/United_Airlines_777_N797UA_LAX.jpg", 
+	:role => "Wide-body jet airliner",
+	:manufacturer_id => boeing_commercial_airplanes.id,  
+	:status => "In service", 
+	:first_flight => "June 12, 1994", 
+	:produced => "1993–present",
+	:number_built => "1,320 through July 2015",
+	:unit_cost => "777-200ER: US$261.5 million", 
+	:description => "The Boeing 777 is a family of long-range wide-body twin-engine jet airliners developed and manufactured by Boeing Commercial Airplanes. It is the world's largest twinjet and has a typical seating capacity for 314 to 451 passengers, with a range of 5,235 to 9,380 nautical miles (9,695 to 17,372 km). Commonly referred to as 777,[3][4] its distinguishing features include the largest-diameter turbofan engines of any aircraft, six wheels on each main landing gear, fully circular fuselage cross-section,[5] and a blade-shaped tail cone.[6] Developed in consultation with eight major airlines, the 777 was designed to replace older wide-body airliners and bridge the capacity difference between Boeing's 767 and 747. As Boeing's first fly-by-wire airliner, it has computer-mediated controls. It is also the first entirely computer-aided designed commercial aircraft.")
 
 Role.create(:airplane_id => erj145.id, 
 	:airline_id => envoy_air.id)
@@ -149,7 +192,25 @@ Role.create(:airplane_id => erj145.id,
 	:airline_id => trans_states_airlines.id)
 Role.create(:airplane_id => erj145.id, 
 	:airline_id => aeromexico_connect.id)
+Role.create(:airplane_id => erj145.id, 
+	:airline_id => delta_airline.id)
+Role.create(:airplane_id => erj145.id, 
+	:airline_id => uni_air.id)
+Role.create(:airplane_id => erj145.id, 
+	:airline_id => eva_air.id)
 
+Role.create(:airplane_id => md90.id, 
+	:airline_id => delta_airline.id)
+Role.create(:airplane_id => md90.id, 
+	:airline_id => uni_air.id)
+Role.create(:airplane_id => md90.id, 
+	:airline_id => eva_air.id)
+Role.create(:airplane_id => md90.id, 
+	:airline_id => envoy_air.id)
+Role.create(:airplane_id => md90.id, 
+	:airline_id => trans_states_airlines.id)
+Role.create(:airplane_id => md90.id, 
+	:airline_id => aeromexico_connect.id)
 Role.create(:airplane_id => md90.id, 
 	:airline_id => delta_airline.id)
 Role.create(:airplane_id => md90.id, 
@@ -183,5 +244,43 @@ Role.create(:airplane_id => airbus_a320.id,
 	:airline_id => china_southern_airlines.id)
 Role.create(:airplane_id => airbus_a320.id, 
 	:airline_id => china_eastern.id)
+Role.create(:airplane_id => airbus_a320.id, 
+	:airline_id => lufthansa.id)
+Role.create(:airplane_id => airbus_a320.id, 
+	:airline_id => iberia.id)
+Role.create(:airplane_id => airbus_a320.id, 
+	:airline_id => south_african_airways.id)
+Role.create(:airplane_id => airbus_a320.id, 
+	:airline_id => virgin_atlantic.id)
+
+Role.create(:airplane_id => md11.id, 
+	:airline_id => fedex_express.id)
+Role.create(:airplane_id => md11.id, 
+	:airline_id => ups_airlines.id)
+Role.create(:airplane_id => md11.id, 
+	:airline_id => lufthansa_cargo.id)
+Role.create(:airplane_id => md11.id, 
+	:airline_id => martinair.id)
+
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => emirates.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => united_airlines.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => cathay_pacific.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => airfrance.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => fedex_express.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => ups_airlines.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => lufthansa_cargo.id)
+Role.create(:airplane_id => boeing_777.id, 
+	:airline_id => martinair.id)
+
+
+jiamaoz1 = User.create(:name => "jiamaozheng1", :email => "jiamaoz@yahoo.com", :password_digest => "0000")
+jiamaoz2 = User.create(:name => "jiamaozheng2", :email => "jiamaoz@uchicago.edu", :password_digest => "1128")
 
 puts "Seeded succesfully."

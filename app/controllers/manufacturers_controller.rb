@@ -2,7 +2,7 @@ class ManufacturersController < ApplicationController
 
   def index
     @manufacturers = Manufacturer.order("name asc")
-    @manufacturers  = @manufacturers.page(params[:page]).per(3)
+    @manufacturers  = @manufacturers.page(params[:page]).per(5)
   end
 
   def show

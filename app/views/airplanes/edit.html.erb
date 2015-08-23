@@ -13,8 +13,9 @@
   <p><label>Produced:</label> <input value="<%= @airplane.produced %>" name="produced" size="30"></p>
   <p><label>Number of built:</label> <input value="<%= @airplane.number_built %>" name="number_built" size="30"></p>
   <p><label>Unit cost:</label> <input value="<%= @airplane.unit_cost %>" name="unit_cost" size="30"></p>
-  <p><label>Description:</label> <input value="<%= @airplane.description %>" name="description" size="300"></p>
-  <p><label>Picture URL:</label> <input value="<%= @airplane.picture_url %>" name="picture_url" size="200"></p>
+  <p><label>Description:</label> </p>
+  <textarea name="description" cols="80" rows="5"><%= @airplane.description %></textarea> <br>
+  <p><label>Picture URL:</label> <input value="<%= @airplane.picture_url %>" name="picture_url" size="100"></p>
 
  <label> Please select a manufacturer:</label>
   <select name="manfacturer_id">

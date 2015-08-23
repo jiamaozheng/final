@@ -2,7 +2,7 @@ class AirlinesController < ApplicationController
 
   def index
     @airlines = Airline.order("name asc")
-    @airlines = @airlines.page(params[:page]).per(8)
+    @airlines = @airlines.page(params[:page]).per(10)
   end
 
   def show
