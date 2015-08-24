@@ -47,7 +47,6 @@ def index
                 description: params[:description]
   
         redirect_to root_url # "/"
-
   end
 
   def edit

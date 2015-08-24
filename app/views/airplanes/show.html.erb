@@ -1,25 +1,25 @@
 <style>
-  h2 {
-    color: red;
-    background: #006;
-    padding: 6px;
-    text-align: center;
-  }
-  .price {
-    color: green;
-    border: solid 3px green;
-    padding: 4px;
-  }
-  img {
-    float: left;
-    margin-right: 40px;
-    box-shadow: 8px 8px 4px gray;
-    height: "200px";
-  }
-  p {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
+h2 {
+  color: red;
+  background: #006;
+  padding: 6px;
+  text-align: center;
+}
+.price {
+  color: green;
+  border: solid 3px green;
+  padding: 4px;
+}
+img {
+  float: left;
+  margin-right: 40px;
+  box-shadow: 8px 8px 4px gray;
+  height: "200px";
+}
+p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 </style>
 
 <h2><%= @airplane.name %></h2>
@@ -33,17 +33,17 @@
 
 <h4>Primary airlines: </h4>
 
-  <% @airplane.airlines.each do |airline| %>
-  <li>
-	 <h4><%= link_to airline.name, "/airlines/#{airline.id}" %></h4>
-  </li>
+<% @airplane.airlines.each do |airline| %>
+<li>
+  <h4><%= link_to airline.name, "/airlines/#{airline.id}" %></h4>
+</li>
 <% end -%> <br>
 
- <p>
+<p>
  <%= image_tag @airplane.picture_url, size: '500x500' %>
- </p> 
+</p> 
 
 
- <h4>Description: </h4>
- <p> <%= @airplane.description %></p><br><br><br><br>
+<h4>Description: </h4>
+<p> <%= @airplane.description %></p><br><br><br><br>
 

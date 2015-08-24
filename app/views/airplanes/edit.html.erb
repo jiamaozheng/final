@@ -4,26 +4,26 @@
 
 <%= form_tag "/airplanes/#{@airplane.id}", :method => 'patch' do %>
 
-  <p><label>Airplane Name:</label> <input value="<%= @airplane.name %>" name="name" size="30"></p>
+<p><label>Airplane Name:</label> <input value="<%= @airplane.name %>" name="name" size="30"></p>
 
-  <p><label>Status:</label> <input value="<%= @airplane.status %>" name="status" size="30"></p>
+<p><label>Status:</label> <input value="<%= @airplane.status %>" name="status" size="30"></p>
 
-  <p><label>First flight:</label> <input value="<%= @airplane.first_flight %>" name="first_flight" size="30"></p>
-  <p><label>Role:</label> <input value="<%= @airplane.role %>" name="role" size="30"></p>
-  <p><label>Produced:</label> <input value="<%= @airplane.produced %>" name="produced" size="30"></p>
-  <p><label>Number of built:</label> <input value="<%= @airplane.number_built %>" name="number_built" size="30"></p>
-  <p><label>Unit cost:</label> <input value="<%= @airplane.unit_cost %>" name="unit_cost" size="30"></p>
-  <p><label>Description:</label> </p>
-  <textarea name="description" cols="80" rows="5"><%= @airplane.description %></textarea> <br>
-  <p><label>Picture URL:</label> <input value="<%= @airplane.picture_url %>" name="picture_url" size="100"></p>
+<p><label>First flight:</label> <input value="<%= @airplane.first_flight %>" name="first_flight" size="30"></p>
+<p><label>Role:</label> <input value="<%= @airplane.role %>" name="role" size="30"></p>
+<p><label>Produced:</label> <input value="<%= @airplane.produced %>" name="produced" size="30"></p>
+<p><label>Number of built:</label> <input value="<%= @airplane.number_built %>" name="number_built" size="30"></p>
+<p><label>Unit cost:</label> <input value="<%= @airplane.unit_cost %>" name="unit_cost" size="30"></p>
+<p><label>Description:</label> </p>
+<textarea name="description" cols="80" rows="5"><%= @airplane.description %></textarea> <br>
+<p><label>Picture URL:</label> <input value="<%= @airplane.picture_url %>" name="picture_url" size="100"></p>
 
- <label> Please select a manufacturer:</label>
-  <select name="manfacturer_id">
-    <% Manufacturer.all.each do |d| %>
-      <option value="<%= d.id %>"><%= d.name %></option>
-    <% end %>
-  </select>
-  <p> </p>
-  <p><button>Update Airplane</button></p>
+<label> Please select a manufacturer:</label>
+<select name="manfacturer_id">
+  <% Manufacturer.all.each do |d| %>
+  <option value="<%= d.id %>"><%= d.name %></option>
+  <% end %>
+</select>
+<p> </p>
+<p><button>Update Airplane</button></p>
 
 <% end %>

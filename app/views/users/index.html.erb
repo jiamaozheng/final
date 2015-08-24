@@ -13,11 +13,11 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.password_digest %></td>
-      </tr>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.password_digest %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>

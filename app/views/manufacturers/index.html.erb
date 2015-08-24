@@ -1,49 +1,36 @@
 <style>
-  h1 {
-    color: white;
-    background: #006;
-    padding: 6px;
-    text-align: center;
-  }
-  .price {
-    color: green;
-    border: solid 3px green;
-    padding: 4px;
-  }
-  img {
-    float: left;
-    margin-right: 40px;
-    box-shadow: 8px 8px 4px gray;
-    height: "200px";
-  }
-  p {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
+h1 {
+  color: white;
+  background: #006;
+  padding: 6px;
+  text-align: center;
+}
+.price {
+  color: green;
+  border: solid 3px green;
+  padding: 4px;
+}
+img {
+  float: left;
+  margin-right: 40px;
+  box-shadow: 8px 8px 4px gray;
+  height: "200px";
+}
+p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 </style>
 
 <h1>Manufacturers</h1>
-
-<!-- <h2><%= cookies.signed["fruit"] %></h2> -->
-
-<% if session["history_manufacturer"] %>
-  <p><small><%= link_to "Clear My Viewing History", "/logout" %></small></p>
-  <div class="recent clearfix">
-    <h4>My Recently Viewed Manufacturers</h4>
-    <% recent_manufacturers = Manufacturer.find(session["history_manufacturer"]) %>
-    <% recent_manufacturers.each do |manufacturer| %>
-      <%= link_to image_tag(manufacturer.poster_url, height: '20px'), manufacturer %>
-    <% end %>
-  </div>
-<% end %>
 
 <p><%= @manufacturers.count %> manfactures shown.</p>
 <%= paginate @manufacturers %>
 
 <ul>
-<% @manufacturers.each do |d| %>
+  <% @manufacturers.each do |d| %>
   <li><%= link_to d.name, "/manufacturers/#{d.id}" %></li>
-<% end %>
+  <% end %>
 </ul>
 
 <% paginate @manufacturers %> 

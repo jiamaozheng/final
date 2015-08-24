@@ -1,38 +1,38 @@
 <style>
-  h2 {
-    color: red;
-    background: #006;
-    padding: 6px;
-    text-align: center;
-  }
-  .price {
-    color: yellow;
-    border: solid 3px yellow;
-    padding: 4px;
-  }
-  img {
-    float: left;
-    margin-right: 40px;
-    box-shadow: 8px 8px 4px gray;
-    height: "50px";
-  }
-  p {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
+h2 {
+  color: red;
+  background: #006;
+  padding: 6px;
+  text-align: center;
+}
+.price {
+  color: yellow;
+  border: solid 3px yellow;
+  padding: 4px;
+}
+img {
+  float: left;
+  margin-right: 40px;
+  box-shadow: 8px 8px 4px gray;
+  height: "50px";
+}
+p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 </style>
 
 <h2><%= @airline.name %></h2>
 
 <p>
-<h4>Operated airplanes:</h4>
+  <h4>Operated airplanes:</h4>
 
-   <% @airline.airplanes.each do |airplane| %>
-<li>
-<h4><%= link_to airplane.name, "/airplanes/#{airplane.id}" %></h4> 
-</li>
+  <% @airline.airplanes.each do |airplane| %>
+  <li>
+    <h4><%= link_to airplane.name, "/airplanes/#{airplane.id}" %></h4> 
+  </li>
 
-<% end %>
+  <% end %>
 </p> <br>
 
 <p>

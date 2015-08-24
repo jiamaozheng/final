@@ -7,23 +7,23 @@
 <% end %>
 
 <%= form_tag "/airplanes" do %>
-  <p><label>Name:</label> <input name="name" size="30"></p>
-  <p><label>Status:</label> <input name="status" size="30"></p>
-  <p><label>First flight:</label> <input name="first_flight" ></p>
-  <p><label>Role:</label> <input name="role" ></p>
-  <p><label>Produced:</label> <input name="produced" ></p>
-  <p><label>Number of built:</label> <input name="number_built" ></p>
-  <p><label>Unit cost:</label> <input name="unit_cost" ></p>
-  <p><label>Description:</label></p>
-  <textarea name="description" cols="80" rows="5"></textarea>
-  <p><label>Picture_url:</label> <input name="picture_url" size="100"></p>
+<p><label>Name:</label> <input name="name" size="30"></p>
+<p><label>Status:</label> <input name="status" size="30"></p>
+<p><label>First flight:</label> <input name="first_flight" ></p>
+<p><label>Role:</label> <input name="role" ></p>
+<p><label>Produced:</label> <input name="produced" ></p>
+<p><label>Number of built:</label> <input name="number_built" ></p>
+<p><label>Unit cost:</label> <input name="unit_cost" ></p>
+<p><label>Description:</label></p>
+<textarea name="description" cols="80" rows="5"></textarea>
+<p><label>Picture_url:</label> <input name="picture_url" size="100"></p>
 
- <label> Please select a manufacturer:</label>
-   <select name="manufacturer_id">
-    <% Manufacturer.all.each do |d| %>
-      <option value="<%= d.id %>"><%= d.name %></option>
-    <% end %>
-  </select>
-  <p> </p>
-  <p><button>Add</button></p>
+<label> Please select a manufacturer:</label>
+<select name="manufacturer_id">
+  <% Manufacturer.all.each do |d| %>
+  <option value="<%= d.id %>"><%= d.name %></option>
+  <% end %>
+</select>
+<p> </p>
+<p><button>Add</button></p>
 <% end %>

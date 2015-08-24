@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "See you later!"
   end
 
-   def clear
+  def clear
     # sessions[:user_id] = nil
     reset_session
     redirect_to user_url(@user.id)

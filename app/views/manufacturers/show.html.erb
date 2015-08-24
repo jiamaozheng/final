@@ -1,32 +1,32 @@
 <style>
-  h2 {
-    color: red;
-    background: #006;
-    padding: 6px;
-    text-align: center;
-  }
-  .price {
-    color: green;
-    border: solid 3px green;
-    padding: 4px;
-  }
-  img {
-    float: left;
-    margin-right: 40px;
-    box-shadow: 8px 8px 4px gray;
-    height: "200px";
-  }
-  p {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
+h2 {
+  color: red;
+  background: #006;
+  padding: 6px;
+  text-align: center;
+}
+.price {
+  color: green;
+  border: solid 3px green;
+  padding: 4px;
+}
+img {
+  float: left;
+  margin-right: 40px;
+  box-shadow: 8px 8px 4px gray;
+  height: "200px";
+}
+p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 </style>
 
 
 <h2><%= @manufacturer.name %></h2>
 
 <h4>Produced airplanes:</h4>
-  <% @manufacturer.airplanes.each do |airplane| %>
+<% @manufacturer.airplanes.each do |airplane| %>
 <li>
  <h4><%= link_to airplane.name, "/airplanes/#{airplane.id}" %></h4>
 </li>
@@ -34,7 +34,7 @@
 
 <p>
   <%= image_tag @manufacturer.poster_url, size: '200x80' %>
- </p>
+</p>
 
 <h4>Description: </h4>
 <p> <%= @manufacturer.description %></p><br><br><br>
